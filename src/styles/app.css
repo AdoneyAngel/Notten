@@ -1,5 +1,6 @@
 :root{
     --notification-red: rgb(255 102 43);
+    --link-blue: #004dff
 }
 *{
     font-family: 'Inter', sans-serif;

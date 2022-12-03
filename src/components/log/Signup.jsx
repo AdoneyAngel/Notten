@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import icon from "../../icons/Notten.png"
 
 import "../../styles/log.css"
@@ -81,7 +83,8 @@ export default class Signup extends React.Component{
                     examTags: []
                 }
 
-                this.props.signUp(newUser)
+                await this.props.signUp(newUser)
+                await this.props.signIn(newUser)
             }
         }
     }
@@ -123,6 +126,7 @@ export default class Signup extends React.Component{
                                 <ShowPassCheckbox callback={this.setShowPassword} showPassword={this.state.showPassword} />
                             </section>
                             <button>Sign up</button>
+                            <Link to="/">Do you have an account? Log in</Link>
                         </form>
 
                     </div>                    

@@ -74,6 +74,7 @@ export default class Login extends React.Component{
                                 <ShowPassCheckbox callback={this.setShowPassword} showPassword={this.state.showPassword} />
                             </section>
                             <button>Log in</button>
+                            <Link to="/signup">Do you not have an account? Sign up</Link>
                         </form>
 
                     </div>                    

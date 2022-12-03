@@ -106,7 +106,8 @@
     border-radius: 5px;
     font-size: 16px;
     padding: 7px 10px;
-    background: white;
+    background: rgba(255, 255, 255, 0.466);
+    z-index: 2;
 }
 .logContentBox > form > section > input[type="password"]{
 }
@@ -122,6 +123,7 @@
     margin-right: 7px;
     transform: translateY(calc(-100% - 5px));
     user-select: none;
+    z-index: 2;
 }
 .showPassCheckbox > img{
     width: 100%;
@@ -149,11 +151,55 @@
     margin-left: auto;
     margin-right: 10px;
 }
+.logContentBox > form > a{
+    text-decoration: none;
+    color: var(--link-blue);
+    display: inline;
+    margin-top: 10px;
+}
 @keyframes hiddeLogPassAfterAni{
     from{
         opacity: 0;
     }
     to{
         opacity: 1;
+    }
+}
+
+@media (max-width: 760px){
+    body{
+        background: white;
+    }
+    .logContentBox > form > button{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .logContentBoxSignup{
+        top: 50%;
+    }
+    .logContentBox{
+        box-shadow: none;
+    }
+    .logContentBoxLogin::after{
+        width: auto;
+        content: "Log in";
+        right: 50%;
+        transform: translate(50%, -50%);
+        font-size: 45px;
+        z-index: 1;
+    }
+    .logContentBoxLogin::before{
+        content: "";
+    }
+    .logContentBoxSignup::after{
+        width: auto;
+        content: "Sign up";
+        right: 50%;
+        transform: translate(50%, -50%);
+        font-size: 45px;
+        z-index: 1;
+    }
+    .logContentBoxSignup::before{
+        content: "";
     }
 }
