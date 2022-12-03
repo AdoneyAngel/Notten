@@ -106,6 +106,9 @@
     border-radius: 5px;
     font-size: 16px;
     padding: 7px 10px;
+    background: white;
+}
+.logContentBox > form > section > input[type="password"]{
 }
 .showPassCheckbox{
     width: 20px;
