@@ -37,7 +37,7 @@ export default class Login extends React.Component{
                             </section>
                             <section>
                                 <label>Password</label>
-                                <input type="text"/>
+                                <input type={`${this.state.showPassword ? "text" : "password"}`}/>
                                 <ShowPassCheckbox callback={this.setShowPassword} showPassword={this.state.showPassword} />
                             </section>
                             <button>Log in</button>

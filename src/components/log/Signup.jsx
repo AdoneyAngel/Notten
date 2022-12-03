@@ -3,7 +3,21 @@ import icon from "../../icons/Notten.png"
 
 import "../../styles/log.css"
 
+import ShowPassCheckbox from "./ShowPassCheckbox";
+
 export default class Signup extends React.Component{
+
+    state = {
+        showPassword: false
+    }
+
+    setShowPassword = () => {
+        this.setState({
+            showPassword: !this.state.showPassword
+        })
+        console.log(this.state.showPassword)
+    }
+
     render(){
 
         return (
@@ -31,7 +45,8 @@ export default class Signup extends React.Component{
                             </section>
                             <section>
                                 <label>Password</label>
-                                <input type="text"/>
+                                <input type={`${this.state.showPassword ? "text" : "password"}`}/>
+                                <ShowPassCheckbox callback={this.setShowPassword} showPassword={this.state.showPassword} />
                             </section>
                             <button>Sign up</button>
                         </form>
